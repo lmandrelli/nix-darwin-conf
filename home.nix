@@ -24,7 +24,7 @@
       
       # LaTeX distribution with pdflatex, biblatex and common packages
       (texlive.withPackages (ps: with ps; [
-        scheme-basic
+        scheme-full
         # Bibliography and citation
         biblatex biber
         # Font collections
