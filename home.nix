@@ -36,7 +36,7 @@
         graphics float subfig
         # Page layout and formatting
         geometry fancyhdr hyperref
-        microtype booktabs
+        microtype booktabs nicematrix
         # Lists and enumeration
         enumitem
         # Code listings
