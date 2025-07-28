@@ -101,6 +101,7 @@
 
       # AI/LLM tools
       claude-code
+      gemini-cli
     ];
   };
 
