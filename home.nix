@@ -1,4 +1,4 @@
-{ config, pkgs-unstable, user, ... }:
+{ config, pkgs-unstable, pkgs-tamarin, user, ... }:
 
 {
   # User home configuration
@@ -97,7 +97,7 @@
 
       # Cybersecurity tools
       # exegol  # Temporarily disabled due to dependency conflicts
-      tamarin-prover
+      pkgs-tamarin.tamarin-prover
 
       # AI/LLM tools
       claude-code

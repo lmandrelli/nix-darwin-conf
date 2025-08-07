@@ -16,6 +16,11 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
     
+    # Specific nixpkgs commit for tamarin-prover
+    nixpkgs-tamarin = {
+      url = "github:NixOS/nixpkgs/a421ac6595024edcfbb1ef950a3712b89161c359";
+    };
+    
     # Homebrew integration
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     homebrew-core = {
@@ -28,7 +33,7 @@
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs-stable, nixpkgs-unstable, home-manager, nix-homebrew, homebrew-core, homebrew-cask }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs-stable, nixpkgs-unstable, nixpkgs-tamarin, home-manager, nix-homebrew, homebrew-core, homebrew-cask }:
   let
     user = "lmandrelli";
     system = "aarch64-darwin";
@@ -50,11 +55,17 @@
       config = nixpkgsConfig;
     };
     
+    # Tamarin-prover packages from specific commit
+    pkgs-tamarin = import nixpkgs-tamarin {
+      inherit system;
+      config = nixpkgsConfig;
+    };
+    
   in {
     darwinConfigurations.${user} = nix-darwin.lib.darwinSystem {
       inherit system;
       specialArgs = { 
-        inherit inputs user pkgs-stable pkgs-unstable; 
+        inherit inputs user pkgs-stable pkgs-unstable pkgs-tamarin; 
       };
       modules = [
         # System configuration
@@ -84,7 +95,7 @@
             useUserPackages = true;
             users.${user} = import ./home.nix;
             extraSpecialArgs = { 
-              inherit inputs user pkgs-unstable; 
+              inherit inputs user pkgs-unstable pkgs-tamarin; 
             };
           };
         }
