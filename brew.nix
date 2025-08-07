@@ -65,8 +65,13 @@
       "obs"
       "xquartz"
       "handbrake-app"
-      "ollama-app"
       "wireshark-app"
+
+      # AI Tools
+      "ollama-app"
+      "lm-studio"
+      "claude"
+      "chatgpt"
 
       # This horrible thing to remove ASAP :
       "microsoft-teams"
