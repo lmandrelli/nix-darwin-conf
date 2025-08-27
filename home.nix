@@ -57,7 +57,7 @@
 
       # Media-related packages
       ffmpeg
-      youtube-dl
+      yt-dlp
 
       # Node.js development tools
       nodejs  # npm is included automatically
@@ -281,6 +281,7 @@
 
     ssh = {
       enable = true;
+      enableDefaultConfig = false;
     };
 
     direnv = {
