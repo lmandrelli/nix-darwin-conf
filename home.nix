@@ -102,7 +102,7 @@
       # AI/LLM tools
       claude-code
       gemini-cli
-      codex
+      qwen-code
     ];
   };
 
