@@ -57,6 +57,7 @@
 
       # Media-related packages
       ffmpeg
+      youtube-dl
 
       # Node.js development tools
       nodejs  # npm is included automatically
