@@ -101,9 +101,7 @@
       pkgs-tamarin.tamarin-prover
 
       # AI/LLM tools
-      claude-code
-      gemini-cli
-      qwen-code
+      opencode
     ];
   };
 
