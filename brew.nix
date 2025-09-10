@@ -68,7 +68,6 @@
       "wireshark-app"
 
       # AI Tools
-      "ollama-app"
       "lm-studio"
       "claude"
       "chatgpt"
