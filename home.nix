@@ -1,4 +1,4 @@
-{ config, pkgs-unstable, pkgs-tamarin, user, ... }:
+{ config, pkgs-unstable, pkgs-stable, pkgs-tamarin, user, ... }:
 
 {
   # User home configuration
@@ -22,8 +22,8 @@
       # Text edition
       typst
       
-      # LaTeX distribution with pdflatex, biblatex and common packages
-      (texlive.withPackages (ps: with ps; [
+      /* # LaTeX distribution with pdflatex, biblatex and common packages (pinned to stable)
+      (pkgs-stable.texlive.withPackages (ps: with ps; [
         scheme-full
         # Bibliography and citation
         biblatex biber
@@ -50,7 +50,7 @@
         # Extra packages
         collection-latexextra
       ]))
-
+    */ # broken on aarch64 (10-09-25)
       # Cloud-related tools and SDKs
       docker
       docker-compose

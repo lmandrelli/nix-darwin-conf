@@ -95,7 +95,7 @@
             useUserPackages = true;
             users.${user} = import ./home.nix;
             extraSpecialArgs = { 
-              inherit inputs user pkgs-unstable pkgs-tamarin; 
+              inherit inputs user pkgs-unstable pkgs-stable pkgs-tamarin; 
             };
           };
         }
