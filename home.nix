@@ -23,33 +23,33 @@
       typst
       
       # LaTeX distribution with pdflatex, biblatex and common packages (BROKEN)
-    #   (pkgs-stable.texlive.withPackages (ps: with ps; [
-    #     scheme-full
-    #     # Bibliography and citation
-    #     biblatex biber
-    #     # Font collections
-    #     collection-fontsrecommended
-    #     collection-fontutils
-    #     # Math and science
-    #     amsmath amsfonts
-    #     # Graphics and figures
-    #     graphics float subfig
-    #     # Page layout and formatting
-    #     geometry fancyhdr hyperref
-    #     microtype booktabs nicematrix
-    #     # Lists and enumeration
-    #     enumitem
-    #     # Code listings
-    #     listings
-    #     # Colors
-    #     xcolor
-    #     # Additional useful packages
-    #     pgf pgfplots beamer
-    #     # Language support
-    #     collection-langenglish
-    #     # Extra packages
-    #     collection-latexextra
-    #   ]))
+      (pkgs-stable.texlive.withPackages (ps: with ps; [
+        scheme-full
+        # Bibliography and citation
+        biblatex biber
+        # Font collections
+        collection-fontsrecommended
+        collection-fontutils
+        # Math and science
+        amsmath amsfonts
+        # Graphics and figures
+        graphics float subfig
+        # Page layout and formatting
+        geometry fancyhdr hyperref
+        microtype booktabs nicematrix
+        # Lists and enumeration
+        enumitem
+        # Code listings
+        listings
+        # Colors
+        xcolor
+        # Additional useful packages
+        pgf pgfplots beamer
+        # Language support
+        collection-langenglish
+        # Extra packages
+        collection-latexextra
+      ]))
       
       # Cloud-related tools and SDKs
       docker
@@ -65,7 +65,7 @@
       bun
 
       # Fonts
-      # jetbrains-mono (broken 10-9-25)
+      jetbrains-mono
       nerd-fonts.jetbrains-mono
       nerd-fonts.meslo-lg
       
