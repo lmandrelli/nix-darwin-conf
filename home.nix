@@ -18,6 +18,7 @@
       baobab
       fd
       gh
+      qemu
 
       # Text edition
       typst
