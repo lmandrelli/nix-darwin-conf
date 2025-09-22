@@ -21,6 +21,7 @@
     casks = [
       # Development Tools
       "docker-desktop"
+      "container"
       "visual-studio-code"
       "visual-studio-code@insiders"
       "mongodb-compass"
@@ -69,8 +70,6 @@
 
       # AI Tools
       "lm-studio"
-      "claude"
-      "chatgpt"
 
       # This horrible thing to remove ASAP :
       "microsoft-teams"
