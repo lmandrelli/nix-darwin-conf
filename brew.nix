@@ -73,6 +73,7 @@
 
       # This horrible thing to remove ASAP :
       "microsoft-teams"
+      "android-studio"
     ];
     
     # Homebrew packages (formula)
