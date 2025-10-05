@@ -22,7 +22,7 @@
 
       # Text edition
       typst
-      fontawesome
+      typstPackages.fontawesome
       
       # LaTeX distribution with pdflatex, biblatex and common packages (BROKEN)
       (pkgs-stable.texlive.withPackages (ps: with ps; [
