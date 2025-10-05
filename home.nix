@@ -22,6 +22,7 @@
 
       # Text edition
       typst
+      typst-package-fontawesome
       
       # LaTeX distribution with pdflatex, biblatex and common packages (BROKEN)
       (pkgs-stable.texlive.withPackages (ps: with ps; [
@@ -69,6 +70,7 @@
       jetbrains-mono
       nerd-fonts.jetbrains-mono
       nerd-fonts.meslo-lg
+      fira
       
       # Text and terminal utilities
       ripgrep
