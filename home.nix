@@ -71,6 +71,7 @@
       nerd-fonts.jetbrains-mono
       nerd-fonts.meslo-lg
       fira
+      font-awesome
       
       # Text and terminal utilities
       ripgrep
