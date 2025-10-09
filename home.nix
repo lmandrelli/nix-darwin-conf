@@ -101,7 +101,7 @@
       lazydocker
 
       # Cybersecurity tools
-      # exegol  # Temporarily disabled due to dependency conflicts
+      exegol 
       pkgs-tamarin.tamarin-prover
 
       # AI/LLM tools
