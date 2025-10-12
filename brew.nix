@@ -74,6 +74,8 @@
       # This horrible thing to remove ASAP :
       "microsoft-teams"
       "android-studio"
+
+      "jan"
     ];
     
     # Homebrew packages (formula)

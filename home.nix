@@ -106,6 +106,7 @@
 
       # AI/LLM tools
       opencode
+      gemini-cli
     ];
   };
 
