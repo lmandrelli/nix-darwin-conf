@@ -28,7 +28,7 @@
       "textmate"
       "zed"
       "warp"
-      "tabby"
+      "ghostty"
       
       # Communication Tools
       "discord"
