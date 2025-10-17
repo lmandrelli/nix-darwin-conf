@@ -107,7 +107,6 @@
       # AI/LLM tools
       opencode
       gemini-cli
-      pkgs-stable.docling
 
       kubectl
       minikube
