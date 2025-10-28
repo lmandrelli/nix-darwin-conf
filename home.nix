@@ -205,8 +205,6 @@
 
     git = {
       enable = true;
-      userName = "Luca Mandrelli";
-      userEmail = "luca.mandrelli@icloud.com";
       lfs.enable = true;
 
       ignores = [
@@ -280,7 +278,11 @@
         ".claude"
       ];
 
-      extraConfig = {
+      settings = {
+        user = {
+          name = "Luca Mandrelli";
+          email = "luca.mandrelli@icloud.com";
+        };
         init.defaultBranch = "main";
         core = {
           editor = "code";
