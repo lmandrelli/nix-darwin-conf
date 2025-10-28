@@ -57,6 +57,9 @@
       docker
       docker-compose
 
+      # Local GitHub Actions tester
+      act
+
       # Media-related packages
       ffmpeg
       yt-dlp
