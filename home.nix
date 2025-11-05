@@ -81,7 +81,8 @@
       tree
 
       # Python packages
-      python3
+      # python3
+      python314
       virtualenv
       uv
 
