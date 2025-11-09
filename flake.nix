@@ -31,9 +31,12 @@
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
+    
+    # Master nixpkgs channel
+    master.url = "github:NixOS/nixpkgs/master";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs-stable, nixpkgs-unstable, nixpkgs-tamarin, home-manager, nix-homebrew, homebrew-core, homebrew-cask }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs-stable, nixpkgs-unstable, nixpkgs-tamarin, home-manager, nix-homebrew, homebrew-core, homebrew-cask, master }:
   let
     user = "lmandrelli";
     system = "aarch64-darwin";
@@ -61,11 +64,17 @@
       config = nixpkgsConfig;
     };
     
+    # Master channel packages
+    pkgs-master = import master {
+      inherit system;
+      config = nixpkgsConfig;
+    };
+    
   in {
     darwinConfigurations.${user} = nix-darwin.lib.darwinSystem {
       inherit system;
       specialArgs = { 
-        inherit inputs user pkgs-stable pkgs-unstable pkgs-tamarin; 
+        inherit inputs user pkgs-stable pkgs-unstable pkgs-tamarin pkgs-master; 
       };
       modules = [
         # System configuration
@@ -95,7 +104,7 @@
             useUserPackages = true;
             users.${user} = import ./home.nix;
             extraSpecialArgs = { 
-              inherit inputs user pkgs-unstable pkgs-stable pkgs-tamarin; 
+              inherit inputs user pkgs-unstable pkgs-stable pkgs-tamarin pkgs-master; 
             };
           };
         }

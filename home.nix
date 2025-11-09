@@ -1,4 +1,4 @@
-{ config, pkgs-unstable, pkgs-stable, pkgs-tamarin, user, ... }:
+{ config, pkgs-unstable, pkgs-stable, pkgs-tamarin, pkgs-master, user, ... }:
 
 {
   # User home configuration
@@ -109,7 +109,7 @@
       pkgs-tamarin.tamarin-prover
 
       # AI/LLM tools
-      opencode
+      pkgs-master.opencode
       gemini-cli
 
       kubectl
