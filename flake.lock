@@ -69,6 +69,22 @@
         "type": "github"
       }
     },
+    "master": {
+      "locked": {
+        "lastModified": 1762718490,
+        "narHash": "sha256-aVv/Kw+e0gNzfaY3y9IeamWbpajYMyBN6ep5wei7EGU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "b7f28e1b7bdad07195e97f8fdb6954e0524b27ad",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "master",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -160,6 +176,7 @@
         "home-manager": "home-manager",
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
+        "master": "master",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
         "nixpkgs-stable": "nixpkgs-stable",
